@@ -1,0 +1,205 @@
+REGISTRER  - SOLO PARA EL SUPER ADMIN
+{
+    "name": "Gerardo",
+	
+    "email": "gerardo@gmail.com",
+    "password": "123123"
+}
+LOGIN
+{
+    "email": "Danieel74896@gmail.com",
+    "password": "123123"
+}
+
+PERMISOS
+{
+    "name": "usuario.editar",
+    "token": "gefgqwf"
+}
+
+VENTA
+{
+    "total": 38.5,
+    "detalles": [
+        {
+            "fkidsucursal_producto" : 1,
+            "cantidad": 24,
+            "precio" : 0.50
+        },
+        {
+            "fkidsucursal_producto" : 5,
+            "cantidad": 17,
+            "precio": 1.50
+        },
+        { 
+            "fkidsucursal_producto": 10,
+            "cantidad" : 2,
+            "precio": 0.50
+        }
+    ],
+	"token": "gefgqwf"
+}
+
+ROLES
+{
+    "name": "Administrador",
+    "permissions": [
+        1,
+        2
+    ],
+	"token": "gefgqwf"
+}
+
+SUCURSAL
+{
+    "nombre": "Sucursal 2 de agosto",
+    "direccion": "Av. 2 de agosto entre 7mo y 8vo anillo",
+    "telefono": "70055278",
+    "token": "gefgqwf"
+}
+
+CATEGORIA
+{
+	"nombre" : "Panes",
+	"token": "gefgqwf"
+}
+
+SUCURSAL_PRODUCTO
+{
+	"stock" : 60,
+	"stock_minimo": 5,
+	"stock_maximo": 200,
+	"fkidproducto": 1,
+	"token": "gefgqwf"
+}
+
+INVENTARIO_INICIAL
+{
+	"token": "gefgqwf"
+}
+
+ORDEN_ENTRADA (estado implicito) (CREATE)
+
+{
+    "nota": "La primera Nota",
+    "productos": [
+        {
+            "fkidinventario_producto" : 4,
+            "cantidad": 10
+        },
+        {
+            "fkidinventario" : 3,
+            "cantidad": 30
+        },
+        { 
+            "fkidinventario": 5,
+            "cantidad" : 12
+        }
+    ],
+	"token": "gefgqwf"
+}
+
+ORDEN_SALIDA  (UPDATE)
+
+{
+    "estado": 0,
+    "productos": [
+        {
+            "fkidinventario_producto": 9,
+            "cantidad": 90
+        },
+        {
+            "fkidinventario_producto": 8,
+            "cantidad": 56
+        },
+        {
+            "fkidinventario_producto": 10,
+            "cantidad": 190
+        }
+    ],
+    "token": "gefgqwf"
+}
+
+ORDEN_ENTRADA (UPDATE)
+{
+    "estado": 1,
+	"token": "gefgqwf"
+}
+// el numero de orden es incremental desde 1000 para adelante
+
+UNIDAD DE MEDIDA
+{
+    "nombre": "gramo",
+    "abreviatura": "g"
+}
+
+PROVEEDOR
+{
+    "empresa": "Sysnova",
+    "ci_nit": "8929373",
+    "nombre": "Vladimir",
+    "apellido": "vasquez arratia",
+    "telefono_celular": "62078083",
+    "email": "vladimir@sysnova.com"
+}
+
+INSUMOS
+{
+    "nombre": "afrecho",
+    "costo": 40,
+    "stock": 15,
+    "stock_minimo": 5,
+    "stock_maximo": 25,
+    "fecha_vencimiento": "2021-06-30",
+    "fkidunidad_medida": 1
+}
+
+COMPRA
+{
+    "fecha_hora": "2020-11-12 02:53:45",
+    "total": 630,
+    "fkidproveedor": 2,
+    "insumos":[
+        {
+            "id": 4,
+            "cantidad": 50000,
+            "precio": 0.0036,
+            "subtotal": 180,
+            "unidad_medida": "gr",
+            "unidad_salida": "kg"
+        },
+        {
+            "id": 6,
+            "cantidad": 50000,
+            "precio": 0.009,
+            "subtotal": 450,
+            "unidad_medida": "gr",
+            "unidad_salida": "kg"
+        }
+    ]
+}
+
+
+RECETA
+{"producto" :"2",
+    "peso":"1200",
+    "insumos" : [
+      {"idinsumo":4,"cantidad":1000,"unidad":"g"},
+      {"idinsumo":5,"cantidad":1000,"unidad":"g"},
+      {"idinsumo":6,"cantidad":1000,"unidad":"g"}
+     
+    ]
+   }
+PRODUCCION
+{ 
+    "estado" : "proceso",
+    "productos" : [
+      {"idproducto":3,"cantidad":100},
+      {"idproducto":5,"cantidad":100}
+    ]
+   }
+   ACTUALIZACION PRODUCCION
+   {
+    "estado":"completado"
+    }
+

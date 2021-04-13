@@ -1,0 +1,7 @@
+Credenciales para PostgreSQL - PgAdmin
+
+Host: ec2-23-23-36-227.compute-1.amazonaws.com
+Database: d4frqgtd4eshsi
+User: eypzbnbznnepmq
+Port: 5432
+Password: 302c2b8f0da046ca1b329226519894d310cb530a2cab67f9c0136a3796c4e0d2
